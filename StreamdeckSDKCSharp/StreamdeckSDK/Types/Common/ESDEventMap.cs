@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Elgato.StreamdeckSDK.Types.Messages;
-using Elgato.StreamdeckSDK.Types.Messages.ESDActions;
+using Elgato.StreamdeckSDK.Types.Events;
+using Elgato.StreamdeckSDK.Types.Events.ESDActions;
 
 namespace Elgato.StreamdeckSDK.Types.Common
 {
@@ -10,20 +10,20 @@ namespace Elgato.StreamdeckSDK.Types.Common
         internal static Dictionary<ESDEvent, Type> EventMap { get; }
             = new Dictionary<ESDEvent, Type>
             {
-                {ESDEvent.KeyUp, typeof(ESDKeyActionMessage)},
-                {ESDEvent.KeyDown, typeof(ESDKeyActionMessage)},
-                {ESDEvent.WillAppear, typeof(ESDAppearanceActionMessage)},
-                {ESDEvent.WillDisappear, typeof(ESDAppearanceActionMessage)},
-                {ESDEvent.DeviceDidConnect, typeof(ESDDeviceConnectMessage)},
-                {ESDEvent.DeviceDidDisconnect, typeof(ESDDeviceDisconnectMessage)},
-                {ESDEvent.ApplicationDidLaunch, typeof(ESDApplicationMessage)},
-                {ESDEvent.ApplicationDidTerminate, typeof(ESDApplicationMessage)},
-                {ESDEvent.TitleParametersDidChange, typeof(ESDTitleParametersChangeActionMessage)},
-                {ESDEvent.SendToPlugin, typeof(ESDSendToPluginActionMessage)},
-                {ESDEvent.DidReceiveSettings, typeof(ESDSettingsActionMessage)},
-                {ESDEvent.DidReceiveGlobalSettings, typeof(ESDGlobalSettingsMessage)},
-                {ESDEvent.PropertyInspectorDidAppear, typeof(ESDPropertyInspectorAppearanceActionMessage)},
-                {ESDEvent.PropertyInspectorDidDisappear, typeof(ESDPropertyInspectorAppearanceActionMessage)},
+                {ESDEvent.KeyUp, typeof(ESDKeyActionEventNotification)},
+                {ESDEvent.KeyDown, typeof(ESDKeyActionEventNotification)},
+                {ESDEvent.WillAppear, typeof(ESDAppearanceActionEventNotification)},
+                {ESDEvent.WillDisappear, typeof(ESDAppearanceActionEventNotification)},
+                {ESDEvent.DeviceDidConnect, typeof(ESDDeviceConnectEventNotification)},
+                {ESDEvent.DeviceDidDisconnect, typeof(ESDDeviceDisconnectEventNotification)},
+                {ESDEvent.ApplicationDidLaunch, typeof(ESDApplicationEventNotification)},
+                {ESDEvent.ApplicationDidTerminate, typeof(ESDApplicationEventNotification)},
+                {ESDEvent.TitleParametersDidChange, typeof(ESDTitleParametersChangeActionEventNotification)},
+                {ESDEvent.SendToPlugin, typeof(ESDSendToPluginActionEventNotification)},
+                {ESDEvent.DidReceiveSettings, typeof(ESDSettingsActionEventNotification)},
+                {ESDEvent.DidReceiveGlobalSettings, typeof(ESDGlobalSettingsEventNotification)},
+                {ESDEvent.PropertyInspectorDidAppear, typeof(ESDPropertyInspectorAppearanceActionEventNotification)},
+                {ESDEvent.PropertyInspectorDidDisappear, typeof(ESDPropertyInspectorAppearanceActionEventNotification)},
             };
     }
 }

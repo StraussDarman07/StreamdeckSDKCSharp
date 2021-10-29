@@ -2,9 +2,9 @@
 using System.Text.Json.Serialization;
 using Elgato.StreamdeckSDK.Types.Common;
 
-namespace Elgato.StreamdeckSDK.Types.Payloads
+namespace Elgato.StreamdeckSDK.Types.Payloads.Events
 {
-    public abstract class ESDPayload
+    public abstract class ESDEventPayload
     {
         private const string COORDINATE_KEY = "coordinates";
 

@@ -1,6 +1,6 @@
 ﻿using System;
-using Elgato.StreamdeckSDK.Types.Messages;
-using Elgato.StreamdeckSDK.Types.Messages.ESDActions;
+using Elgato.StreamdeckSDK.Types.Events;
+using Elgato.StreamdeckSDK.Types.Events.ESDActions;
 
 namespace Elgato.StreamdeckSDK
 {
@@ -78,20 +78,20 @@ namespace Elgato.StreamdeckSDK
             GC.SuppressFinalize(this);
         }
 
-        protected virtual void OnKeyDown(object sender, ESDKeyActionMessage keyAction) {}
-        protected virtual void OnKeyUp(object sender, ESDKeyActionMessage keyAction) {}
-        protected virtual void OnSendToPlugin(object sender, ESDSendToPluginActionMessage keyAction) {}
-        protected virtual void OnDeviceDidConnect(object sender, ESDDeviceConnectMessage keyAction) {}
-        protected virtual void OnDeviceDidDisconnect(object sender, ESDDeviceDisconnectMessage keyAction) {}
-        protected virtual void OnWillDisappearForAction(object sender, ESDAppearanceActionMessage e) {}
-        protected virtual void OnWillAppearForAction(object sender, ESDAppearanceActionMessage e){}
-        protected virtual void OnTitleParametersChanged(object sender, ESDTitleParametersChangeActionMessage e){}
-        protected virtual void OnPropertyInspectorDisappeared(object sender, ESDPropertyInspectorAppearanceActionMessage e){}
-        protected virtual void OnPropertyInspectorAppeared(object sender, ESDPropertyInspectorAppearanceActionMessage e){}
-        protected virtual void OnReceiveGlobalSettings(object sender, ESDGlobalSettingsMessage e){}
-        protected virtual void OnReceiveSettings(object sender, ESDSettingsActionMessage e){}
-        protected virtual void OnApplicationDidTerminate(object sender, ESDApplicationMessage e){}
-        protected virtual void OnApplicationDidLaunch(object sender, ESDApplicationMessage e){}
+        protected virtual void OnKeyDown(object sender, ESDKeyActionEventNotification keyAction) {}
+        protected virtual void OnKeyUp(object sender, ESDKeyActionEventNotification keyAction) {}
+        protected virtual void OnSendToPlugin(object sender, ESDSendToPluginActionEventNotification keyAction) {}
+        protected virtual void OnDeviceDidConnect(object sender, ESDDeviceConnectEventNotification keyAction) {}
+        protected virtual void OnDeviceDidDisconnect(object sender, ESDDeviceDisconnectEventNotification keyAction) {}
+        protected virtual void OnWillDisappearForAction(object sender, ESDAppearanceActionEventNotification e) {}
+        protected virtual void OnWillAppearForAction(object sender, ESDAppearanceActionEventNotification e){}
+        protected virtual void OnTitleParametersChanged(object sender, ESDTitleParametersChangeActionEventNotification e){}
+        protected virtual void OnPropertyInspectorDisappeared(object sender, ESDPropertyInspectorAppearanceActionEventNotification e){}
+        protected virtual void OnPropertyInspectorAppeared(object sender, ESDPropertyInspectorAppearanceActionEventNotification e){}
+        protected virtual void OnReceiveGlobalSettings(object sender, ESDGlobalSettingsEventNotification e){}
+        protected virtual void OnReceiveSettings(object sender, ESDSettingsActionEventNotification e){}
+        protected virtual void OnApplicationDidTerminate(object sender, ESDApplicationEventNotification e){}
+        protected virtual void OnApplicationDidLaunch(object sender, ESDApplicationEventNotification e){}
 
     }
 }
